@@ -1,0 +1,12 @@
+# Algorithm dev 
+
+num1 increments from 10 ~ 16 
+
+and we will have to check if it's divisible from 2 and 3 
+
+so we have a table of 2 and 3 in y axis and for x axis we will have the values of incremential numbers 
+
+and at the end we will be able to use AND statement to check if the two  2 and 3 divisibility is true. 
+
+|  | 2| 3| 
+|--------| 
