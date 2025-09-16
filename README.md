@@ -17,3 +17,5 @@ Data types exercises: [Exercise File](01.Introductions/Exercises.md)
 
 Info about operators and string methods: [Operators and String Methods Document](02.Operators%20and%20String%20Methods/Intro.md)  
 Operators and String Methods Exercises: [Exercise File](02.Operators%20and%20String%20Methods/operators_and_string_methods.py)  
+
+[WEEKLY RECAP](https://docs.google.com/document/d/1daZyXWa1LWbOKxxyu0YfrfdxaqTSIVGra9CrVhHXNSI/edit?usp=sharing)
