@@ -1,4 +1,4 @@
-# Class 01 - Welcome
+# Week 01 - Welcome
 
 ## Introduction
 
