@@ -1,7 +1,7 @@
 """
-Pure insanity but works somehow 
-I think i forgot to implement some value error on my script 
-but who cares 
+Pure insanity but works somehow
+I think i forgot to implement some value error on my script
+but who cares
 """
 
 def money(prompt: str) -> float:
