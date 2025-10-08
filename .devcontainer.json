@@ -10,20 +10,6 @@
         "cs50.extension-uninstaller",
         "inferrinizzard.prettier-sql-vscode",
         "mathematic.vscode-pdf",
-        "ms-ceintl.vscode-language-pack-bg",
-        "ms-ceintl.vscode-language-pack-cs",
-        "ms-ceintl.vscode-language-pack-de",
-        "ms-ceintl.vscode-language-pack-es",
-        "ms-ceintl.vscode-language-pack-fr",
-        "ms-ceintl.vscode-language-pack-hu",
-        "ms-ceintl.vscode-language-pack-it",
-        "ms-ceintl.vscode-language-pack-ja",
-        "ms-ceintl.vscode-language-pack-ko",
-        "ms-ceintl.vscode-language-pack-pl",
-        "ms-ceintl.vscode-language-pack-pt-br",
-        "ms-ceintl.vscode-language-pack-ru",
-        "ms-ceintl.vscode-language-pack-zh-hans",
-        "ms-ceintl.vscode-language-pack-zh-hant",
         "ms-python.autopep8",
         "ms-python.python",
         "ms-vscode.cpptools",
@@ -31,7 +17,8 @@
         "ms-vsliveshare.vsliveshare",
         "redhat.java",
         "vscjava.vscode-java-debug",
-        "vsls-contrib.gitdoc"
+        "vsls-contrib.gitdoc",
+        "Prettier.Prettier"
       ],
       "settings": {
         "C_Cpp.autocomplete": "disabled",
@@ -45,7 +32,7 @@
         "C_Cpp.formatting": "clangFormat",
         "Prettier-SQL.keywordCase": "upper",
         "[python]": {
-          "editor.defaultFormatter": "ms-python.autopep8"
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "breadcrumbs.enabled": false,
         "diffEditor.diffAlgorithm": "advanced",
@@ -57,12 +44,12 @@
         "editor.foldingHighlight": false,
         "editor.formatOnSave": false,
         "editor.guides.indentation": false,
-        "editor.hover.enabled": false,
-        "editor.lightbulb.enabled": false,
+        "editor.hover.enabled": true,
+        "editor.lightbulb.enabled": "off",
         "editor.matchBrackets": "never",
         "editor.minimap.enabled": false,
-        "editor.occurrencesHighlight": false,
-        "editor.parameterHints.enabled": false,
+        "editor.occurrencesHighlight": "singleFile",
+        "editor.parameterHints.enabled": true,
         "editor.quickSuggestions": {
           "comments": "off",
           "other": "off",
@@ -140,11 +127,11 @@
         "terminal.integrated.commandsToSkipShell": [
           "workbench.action.toggleSidebarVisibility"
         ],
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "terminal.integrated.enableBell": true,
+        "terminal.integrated.defaultProfile.windows": "PowerShell",
+        "terminal.integrated.enableVisualBell": true,
         "terminal.integrated.gpuAcceleration": "off",
         "terminal.integrated.persistentSessionReviveProcess": "never",
-        "terminal.integrated.profiles.linux": {
+        "terminal.integrated.profiles.windows": {
           "JavaScript Debug Terminal": null,
           "bash": {
             "args": [
