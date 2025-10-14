@@ -42,23 +42,28 @@
 
 def shopping():
 
+    """
+    Loop for getting the wallet value until "done"
+    """
     while True:
-        wallet = input("How much money do you have in your pocket?").strip()
-        if wallet.lower() == "done":
+        pocket = input("How much money do you have in your pocket?").strip()
+        if pocket.lower() == "done":
             print("You don't have money to spend.")
             return
         try:
-            wallet_balance = float(wallet)  # We need to convert to number for calculations
-            if wallet_balance < 0:
+            pocket_balance = float(pocket)  # We need to convert to number for calculations
+            if pocket_balance < 0:
                 print("Amounts can't be negative")
                 continue
             break
-        except ValueError: # If the 
+        except ValueError:
             print("Please enter the valid numbers")
 
     total_spent = 0.0 # Tracking variable
 
-    # Main loop for shopping
+    """
+    Main loop for shopping
+    """
     while True:
         item_name = input("What would you like to buy? ").strip()
         #  Stop word "Done"
@@ -81,7 +86,9 @@ def shopping():
             print("Please enter a valid number plz")
             continue
 
-         # Conditional check for checking if we can afford it or not.
+         """
+         Conditional check for checking if we can afford it or not
+         """
         if item_cost <= wallet_balance:
             # Update wallet, and total cost
             wallet_balance -= item_cost
@@ -102,16 +109,10 @@ def shopping():
     print(f"Shopping complete. You have {format_amount(wallet_balance)}PLN remaining in your wallet, "
           f"you’ve spent {format_amount(total_spent)}PLN.")
 
-# def format_amount(x):
-#     """Helper to print whole numbers without .0, otherwise two decimals."""
-#     if float(x).is_integer():
-#         return str(int(x))
-#     return f"{x:.2f}"
-
-
 if __name__ == "__main__":
     shopping()
 
-
-
-
+# def format_amount(x):
+#     if float(x).is_integer():
+#         return str(int(x))
+#     return f"{x:.2f}"
