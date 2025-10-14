@@ -66,24 +66,24 @@ def shopping():
     """
     while True:
         item_name = input("What would you like to buy? ").strip()
-        #  Stop word "Done"
+        #  Stop word "done"
         if item_name.lower() == "done":
             break
         if item_name == "":
             print("Please enter an item name.")
             continue
 
-        # Ask for item cost
+        # Ask for item's price as input
         price_input = input("How much does it cost? ").strip()
         if price_input.lower() == "done":
             break  # allow stopping here too
         try:
-            item_cost = float(price_input)  # convert to number for calculations
+            item_cost = float(price_input)  # convert to float datatype for calculations
             if item_cost <= 0:
                 print("Please enter a positive prices")
                 continue
         except ValueError:
-            print("Please enter a valid number plz")
+            print("Enter a valid number plz")
             continue
 
         """
