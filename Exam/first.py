@@ -41,10 +41,22 @@
 # Shopping complete. You have 37PLN remaining in your wallet, you’ve spent 23PLN.
 
 def wallet():
+    total = 0.0
+    item_count = 0
+
     while True:
         wallet = input("How much money do you have in your pocket?(input)").strip()
         if wallet.lower() == "done":
             break
+
+        # Some basic validation
+        while True:
+            try:
+                price_str = input(f"How much does {thing} this thing cost?").strip()
+                price = float(price_str)
+                break
+            except ValueError:
+                print("This is a wrong number, please add correct number")
 
 if __name__ == "__main__":
     wallet()
