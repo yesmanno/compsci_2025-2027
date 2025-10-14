@@ -98,7 +98,7 @@ def shopping():
             print(f"You don't have enough money to afford {item_name}.")
             print(f"You still have {format_amount(wallet_balance)}PLN left.")
 
-    # --- Final summary ---
+    # Summary on your shopping
     print(f"Shopping complete. You have {format_amount(wallet_balance)}PLN remaining in your wallet, "
           f"you’ve spent {format_amount(total_spent)}PLN.")
 
