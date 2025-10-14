@@ -23,7 +23,7 @@
 # Use conditional statements to check if purchases are affordable.
 # Use string methods to manage user input.
 # Include comments that describe each major section of your code. (loop, conditional check etc.)
-# Follow naming conventions (meaningful variable and function names, e.g. wallet_balance, item_cost).
+# Follow naming conventions (meaningful variable and function names, e.g. pocket_balance, item_cost).
 
 # Example Output/Input
 # How much money do you have in your pocket?(input) 50
@@ -86,28 +86,28 @@ def shopping():
             print("Please enter a valid number plz")
             continue
 
-         """
-         Conditional check for checking if we can afford it or not
-         """
-        if item_cost <= wallet_balance:
+        """
+        Conditional check for checking if we can afford it or not
+        """
+        if item_cost <= pocket_balance:
             # Update wallet, and total cost
-            wallet_balance -= item_cost
+            pocket_balance -= item_cost
             total_spent += item_cost
-            print(f"{item_name} was purchased for {format_amount(item_cost)}PLN. "
-                  f"You have {format_amount(wallet_balance)}PLN left.")
+            print(f"{item_name} was purchased for {item_cost}PLN. "
+                  f"You have {pocket_balance}PLN left.")
 
             # If money is gone and is 0 you get break.
-            if wallet_balance == 0: # Brokie counter
+            if pocket_balance == 0: # Brokie counter
                 print("You have run out of money.")
                 break
         else:
             # Not affordable, so print warnings
             print(f"You don't have enough money to afford {item_name}.")
-            print(f"You still have {format_amount(wallet_balance)}PLN left.")
+            print(f"You still have {pocket_balance}PLN left.")
 
     # Summary on your shopping
-    print(f"Shopping complete. You have {format_amount(wallet_balance)}PLN remaining in your wallet, "
-          f"you’ve spent {format_amount(total_spent)}PLN.")
+    print(f"Shopping complete. You have {pocket_balance}PLN remaining in your wallet, "
+          f"you’ve spent {total_spent}PLN.")
 
 if __name__ == "__main__":
     shopping()
