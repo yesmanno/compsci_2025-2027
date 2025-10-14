@@ -40,13 +40,15 @@
 # What would you like to buy? done
 # Shopping complete. You have 37PLN remaining in your wallet, you’ve spent 13PLN.
 
-# This was proof of concept for when you are acutally wanting
-# Only just integer rather than floating point value, you can use this.
+"""
+This is only a proof of concept for when you are acutally wanting
+only integer rather than floating point value for output, you can use this.
 
-# def format_amount(x):
-#     if float(x).is_integer():
-#         return str(int(x))
-#     return f"{x:.2f}"
+ def format_amount(x):
+    if float(x).is_integer():
+         return str(int(x))
+    return f"{x:.2f}"
+"""
 
 def shopping():
 
@@ -86,7 +88,7 @@ def shopping():
         if price_input.lower() == "done":
             break  # allow stopping here too
         try:
-            item_cost = float(price_input) # convert to float datatype for calculations
+            item_cost = float(price_input) # convert to float data-type for calculations
             if item_cost <= 0:
                 print("Please enter a positive prices")
                 continue
@@ -113,7 +115,7 @@ def shopping():
             print(f"You don't have enough money to afford {item_name}.")
             print(f"You still have {pocket_balance}PLN left.")
 
-    # Summary on your shopping
+    # Summary on your shopping, and finish yipeee!1!
     print(f"Shopping complete. You have {pocket_balance}PLN remaining in your wallet, "
           f"you’ve spent {total_spent}PLN.")
 
