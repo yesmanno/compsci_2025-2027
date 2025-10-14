@@ -43,14 +43,14 @@
 def shopping():
 
     while True:
-        wallet = input("How much money do you have in your pocket?(input)").strip()
+        wallet = input("How much money do you have in your pocket?").strip()
         if wallet.lower() == "done":
             print("You don't have money to spend.")
             return
         try:
             wallet_balance = float(start_input)  # We need to convert to number for calculations
             if wallet_balance < 0:
-                print("Please enter a non-negative amount.")
+                print("Amounts can't be negative")
                 continue
             break
         except ValueError:
@@ -83,13 +83,13 @@ def shopping():
 
          # Conditional check for checking if we can afford it or not.
         if item_cost <= wallet_balance:
-            # Update wallet, and total cost.
+            # Update wallet, and total cost
             wallet_balance -= item_cost
             total_spent += item_cost
             print(f"{item_name} was purchased for {format_amount(item_cost)}PLN. "
                   f"You have {format_amount(wallet_balance)}PLN left.")
 
-            # If money is gone and is 0,
+            # If money is gone and is 0 you get break.
             if wallet_balance == 0: # Brokie counter
                 print("You have run out of money.")
                 break
@@ -104,74 +104,73 @@ def shopping():
 
 def format_amount(x):
     """Helper to print whole numbers without .0, otherwise two decimals."""
-    # W3Schools-style basics: use float methods and f-strings
     if float(x).is_integer():
         return str(int(x))
     return f"{x:.2f}"
 
 
 if __name__ == "__main__":
-    wallet()
+    shopping()
 
 
 
 
 
 
-    # --- Initialize tracking variables ---
-    total_spent = 0.0  # how much has been spent in total
+#     # --- Initialize tracking variables ---
+#     total_spent = 0.0  # how much has been spent in total
 
-    # --- Main shopping loop ---
-    while True:
-        item_name = input("What would you like to buy? ").strip()
-        # Case-insensitive stop word
-        if item_name.lower() == "done":
-            break
-        if item_name == "":
-            print("Please enter an item name.")
-            continue
+#     # --- Main shopping loop ---
+#     while True:
+#         item_name = input("What would you like to buy? ").strip()
+#         # Case-insensitive stop word
+#         if item_name.lower() == "done":
+#             break
+#         if item_name == "":
+#             print("Please enter an item name.")
+#             continue
 
-        # --- Ask for item cost (with validation) ---
-        price_input = input("How much does it cost? ").strip()
-        if price_input.lower() == "done":
-            break  # allow stopping here too
-        try:
-            item_cost = float(price_input)  # convert to number for calculations
-            if item_cost <= 0:
-                print("Please enter a positive price.")
-                continue
-        except ValueError:
-            print("Please enter a valid number (e.g., 3 or 2.99).")
-            continue
+#         # --- Ask for item cost (with validation) ---
+#         price_input = input("How much does it cost? ").strip()
+#         if price_input.lower() == "done":
+#             break  # allow stopping here too
+#         try:
+#             item_cost = float(price_input)  # convert to number for calculations
+#             if item_cost <= 0:
+#                 print("Please enter a positive price.")
+#                 continue
+#         except ValueError:
+#             print("Please enter a valid number (e.g., 3 or 2.99).")
+#             continue
 
-        # --- Conditional check: can we afford it? ---
-        if item_cost <= wallet_balance:
-            # Update wallet and totals
-            wallet_balance -= item_cost
-            total_spent += item_cost
-            print(f"{item_name} was purchased for {format_amount(item_cost)}PLN. "
-                  f"You have {format_amount(wallet_balance)}PLN left.")
+#         # --- Conditional check: can we afford it? ---
+#         if item_cost <= wallet_balance:
+#             # Update wallet and totals
+#             wallet_balance -= item_cost
+#             total_spent += item_cost
+#             print(f"{item_name} was purchased for {format_amount(item_cost)}PLN. "
+#                   f"You have {format_amount(wallet_balance)}PLN left.")
 
-            # Stop automatically if money is gone
-            if wallet_balance == 0:
-                print("You have run out of money.")
-                break
-        else:
-            # Not affordable: warn and do not subtract
-            print(f"You don't have enough money to afford {item_name}.")
-            print(f"You still have {format_amount(wallet_balance)}PLN left.")
+#             # Stop automatically if money is gone
+#             if wallet_balance == 0:
+#                 print("You have run out of money.")
+#                 break
+#         else:
+#             # Not affordable: warn and do not subtract
+#             print(f"You don't have enough money to afford {item_name}.")
+#             print(f"You still have {format_amount(wallet_balance)}PLN left.")
 
-    # --- Final summary ---
-    print(f"Shopping complete. You have {format_amount(wallet_balance)}PLN remaining in your wallet, "
-          f"you’ve spent {format_amount(total_spent)}PLN.")
+#     # --- Final summary ---
+#     print(f"Shopping complete. You have {format_amount(wallet_balance)}PLN remaining in your wallet, "
+#           f"you’ve spent {format_amount(total_spent)}PLN.")
 
-def format_amount(x):
-    """Helper to print whole numbers without .0, otherwise two decimals."""
-    # W3Schools-style basics: use float methods and f-strings
-    if float(x).is_integer():
-        return str(int(x))
-    return f"{x:.2f}"
+# def format_amount(x):
+#     """Helper to print whole numbers without .0, otherwise two decimals."""
+#     # W3Schools-style basics: use float methods and f-strings
+#     if float(x).is_integer():
+#         return str(int(x))
+#     return f"{x:.2f}"
 
-# Standard Python main guard
-if __name__ == "__main__":
-    run_shopping()
+# # Standard Python main guard
+# if __name__ == "__main__":
+#     run_shopping()
