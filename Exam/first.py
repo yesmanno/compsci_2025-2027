@@ -56,7 +56,7 @@ def shopping():
     Loop for getting the wallet value until "done"
     """
     while True:
-        pocket = input("How much money do you have in your pocket?").strip()
+        pocket = input("How much money do you have in your pocket? ").strip()
         if pocket.lower() == "done":
             print("You don't have money to spend.")
             return
