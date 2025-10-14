@@ -40,6 +40,14 @@
 # What would you like to buy? done
 # Shopping complete. You have 37PLN remaining in your wallet, you’ve spent 13PLN.
 
+# This was proof of concept for when you are acutally wanting
+# Only just integer rather than floating point value, you can use this.
+
+# def format_amount(x):
+#     if float(x).is_integer():
+#         return str(int(x))
+#     return f"{x:.2f}"
+
 def shopping():
 
     """
@@ -112,7 +120,4 @@ def shopping():
 if __name__ == "__main__":
     shopping()
 
-# def format_amount(x):
-#     if float(x).is_integer():
-#         return str(int(x))
-#     return f"{x:.2f}"
+
