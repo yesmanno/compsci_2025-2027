@@ -48,7 +48,7 @@ def shopping():
             print("You don't have money to spend.")
             return
         try:
-            wallet_balance = float(start_input)  # We need to convert to number for calculations
+            wallet_balance = float(wallet)  # We need to convert to number for calculations
             if wallet_balance < 0:
                 print("Amounts can't be negative")
                 continue
