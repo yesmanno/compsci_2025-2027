@@ -39,3 +39,14 @@
 # You still have 37PLN left.
 # What would you like to buy? done
 # Shopping complete. You have 37PLN remaining in your wallet, you’ve spent 23PLN.
+
+def wallet():
+    while True:
+        wallet = input("How much money do you have in your pocket?(input)").strip()
+        if wallet.lower() == "done":
+            break
+
+if __name__ == "__main__":
+    wallet()
+
+
