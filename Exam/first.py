@@ -69,7 +69,7 @@ def shopping():
         #  Stop word "done"
         if item_name.lower() == "done":
             break
-        if item_name == "":
+        if item_name == "": # tbh i think i used too much if statement, bad for opt'ing
             print("Please enter an item name.")
             continue
 
@@ -78,7 +78,7 @@ def shopping():
         if price_input.lower() == "done":
             break  # allow stopping here too
         try:
-            item_cost = float(price_input)  # convert to float datatype for calculations
+            item_cost = float(price_input) # convert to float datatype for calculations
             if item_cost <= 0:
                 print("Please enter a positive prices")
                 continue
