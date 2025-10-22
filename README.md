@@ -1,4 +1,7 @@
-# compsci_2025-2027
+# Yesmanno's compsci_2025-2027
+
+![cats](https://github.com/user-attachments/assets/0b10fb70-6d2e-446e-b823-f1b25c53e169)
+
 
 Codebase for classroom materials
 
