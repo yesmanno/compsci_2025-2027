@@ -1,5 +1,6 @@
 # Bubble bubble bubble bubble 
 # sort? what's sort? I only know bubble 
+# Mashallah the code is bad
 def bubbleSort(array): 
     # loop to access each array element 
     for i in range(len(array)): 
