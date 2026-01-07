@@ -20,7 +20,7 @@ print(len(shopping_list))
 # - Remove one item by VALUE (not by index)(use remove() list method)
 # Write your own code below this comment.
 
-# TODO: write code here using shopping_list.append(item) and shopping_list.remove(item)
+# TODO: write code here using append() and remove()
 
 print("Updated shopping list:", shopping_list)
 
