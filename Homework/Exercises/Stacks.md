@@ -14,6 +14,7 @@ This worksheet uses a standard Python list as a stack, which has the following m
 ### 1. Basic Trace
 
 A new, empty stack `s` is created.
+
 ```python
 s = []
 s.append(10)
@@ -22,12 +23,14 @@ s.append(30)
 s.pop()
 s.append(40)
 ```
+
 Final Stack:
 (Sketch here)
 
 ### 2. Trace with peek
 
 A new, empty stack `s` is created. What is printed to the console?
+
 ```python
 s = []
 s.append("A")
@@ -38,6 +41,7 @@ s.pop()
 print(s[-1])  # peek
 s.append("D")
 ```
+
 Printed: _________________
 Final Stack:
 (Sketch here)
@@ -45,6 +49,7 @@ Final Stack:
 ### 3. Trace with isEmpty
 
 A new, empty stack `s` is created. What is printed to the console?
+
 ```python
 s = []
 print(len(s) == 0)  # isEmpty
@@ -53,6 +58,7 @@ print(len(s) == 0)  # isEmpty
 s.pop()
 print(len(s) == 0)  # isEmpty
 ```
+
 Printed: _________________
 Final Stack:
 (Sketch here)
@@ -60,6 +66,7 @@ Final Stack:
 ### 4. Complex Trace
 
 A new, empty stack `s` is created.
+
 ```python
 s = []
 s.append(5)
@@ -72,12 +79,14 @@ s.pop()
 s.pop()
 s.append(30)
 ```
+
 Final Stack:
 (Sketch here)
 
 ### 5. Emptying a Stack
 
 A new, empty stack `s` is created. What happens when the last `pop()` is called?
+
 ```python
 s = []
 s.append(1)
@@ -86,6 +95,7 @@ s.pop()
 s.pop()
 s.pop()  # What happens here?
 ```
+
 Description of last operation: _________________
 Final Stack:
 (Sketch here)
@@ -97,6 +107,7 @@ Final Stack:
 ### 1. Sum of Stack
 
 Write a function `def sum_stack(s):` that calculates the sum of all integers in the stack. Note: This operation will destroy the original stack (it will be empty after).
+
 ```python
 def sum_stack(s):
     total_sum = 0
@@ -107,6 +118,7 @@ def sum_stack(s):
 ### 2. Count Elements
 
 Write a function `def count(s):` that returns the number of elements in the stack. Crucially, the stack must be in its original state after the function finishes. (Hint: You will need a temporary stack).
+
 ```python
 def count(s):
     temp = []
@@ -119,6 +131,7 @@ def count(s):
 ### 3. Find First Pushed (Bottom) Element
 
 Write a function `def find_bottom(s):` that will locate and return (not print) the first element that was pushed onto the stack (i.e., the one at the very bottom). The stack must be returned to its original state.
+
 ```python
 def find_bottom(s):
     temp = []
@@ -131,6 +144,7 @@ def find_bottom(s):
 ### 4. Check for Item
 
 Write a function `def exists(s, target):` that returns `True` if the target is in the stack, and `False` otherwise. The stack must be returned to its original state.
+
 ```python
 def exists(s, target):
     temp = []
@@ -143,6 +157,7 @@ def exists(s, target):
 ### 5. Duplicate Top Element
 
 Write a function `def duplicate_top(s):` that duplicates the top element of the stack. For example, if the stack is `[10, 20, 30]` (with `30` at the top), the result should be `[10, 20, 30, 30]`. If the stack is empty, it should remain empty.
+
 ```python
 def duplicate_top(s):
     # Your code here (use an if statement and stack[-1])
