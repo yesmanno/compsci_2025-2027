@@ -156,6 +156,9 @@ if __name__ == "__main__":
 * **Stack push:** `append(x)`
 * **Stack pop:** `pop()`
 
+
+This one is wihtout library. 
+
 ```py
 # Queue (FIFO) using a list
 dispatch_queue = []
