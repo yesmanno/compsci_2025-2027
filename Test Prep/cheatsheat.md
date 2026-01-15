@@ -108,8 +108,6 @@ def view_manifest() -> None:
             print(f"  {i}. {item}")
             i += 1
 
-    print("==============\n")
-
 
 def main() -> None:
     while True:
@@ -157,7 +155,7 @@ if __name__ == "__main__":
 * **Stack pop:** `pop()`
 
 
-This one is wihtout library. 
+This one is wihtout library.
 
 ```py
 # Queue (FIFO) using a list

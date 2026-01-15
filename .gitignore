@@ -7,7 +7,7 @@
 # But do ignore these folders
 node_modules/
 vendor/
-summatives/
+
 # But don't ignore these files
 !/.devcontainer.json
 !/.vscode/settings.json
