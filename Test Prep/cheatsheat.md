@@ -156,6 +156,92 @@ if __name__ == "__main__":
 * **Stack push:** `append(x)`
 * **Stack pop:** `pop()`
 
+```py
+# Queue (FIFO) using a list
+dispatch_queue = []
+
+# Stack (LIFO) using a list
+shipped_stack = []
 
 
-If your test twists the story (e.g., “urgent order goes to front”, “redo shipment”, “peek next order”), tell me the variants and I’ll add 3–4 extra mini-snippets that cover those too.
+def place_order(order_id: str) -> None:
+    dispatch_queue.append(order_id)  # enqueue (back)
+    print(f"Order received: {order_id} added to queue.")
+
+
+def ship_next() -> None:
+    if len(dispatch_queue) == 0:
+        print("No pending orders to ship.")
+        return
+
+    order = dispatch_queue.pop(0)     # dequeue (front)
+    shipped_stack.append(order)       # push to stack
+    print(f"Shipped: {order} loaded onto truck.")
+
+
+def cancel_last_shipment() -> None:
+    if len(shipped_stack) == 0:
+        print("No shipped orders to cancel.")
+        return
+
+    order = shipped_stack.pop()       # pop most recent
+    dispatch_queue.insert(0, order)   # return to FRONT of queue
+    print(f"Shipping Cancelled: {order} returned to front of line.")
+
+
+def view_manifest() -> None:
+    print("\n=== MANIFEST ===")
+
+    print("To Be Shipped (Queue - front to back):")
+    if len(dispatch_queue) == 0:
+        print("  (empty)")
+    else:
+        for i in range(len(dispatch_queue)):
+            print(f"  {i+1}. {dispatch_queue[i]}")
+
+    print("On The Truck (Stack - bottom to top):")
+    if len(shipped_stack) == 0:
+        print("  (empty)")
+    else:
+        for i in range(len(shipped_stack)):
+            print(f"  {i+1}. {shipped_stack[i]}")
+
+    print("==============\n")
+
+
+def main() -> None:
+    while True:
+        print("1. Place New Order")
+        print("2. Ship Next Order")
+        print("3. Cancel Last Shipment (Undo)")
+        print("4. View Manifest")
+        print("5. Exit System")
+        choice = input("Select Option: ").strip()
+
+        if choice == "1":
+            order = input("Enter Order ID/Details: ").strip()
+            if order == "":
+                print("Order cannot be blank.")
+            else:
+                place_order(order)
+
+        elif choice == "2":
+            ship_next()
+
+        elif choice == "3":
+            cancel_last_shipment()
+
+        elif choice == "4":
+            view_manifest()
+
+        elif choice == "5":
+            print("System shutting down...")
+            break
+
+        else:
+            print("Invalid command.")
+
+
+if __name__ == "__main__":
+    main()
+```
