@@ -98,102 +98,103 @@ while True:
         print("wrong choice.")
 
 
+"""
+Exam/ $ python3 second.py
 
-# Exam/ $ python3 second.py
+1. Add Song
+2. Play Next
+3. View Current Song Year
+4. Play Previous
+5. View Status
+6. Exit
+What option?1
+Song title: Test
+Song year: 2020
+Added ['Test', 2020] to queue.
 
-# 1. Add Song
-# 2. Play Next
-# 3. View Current Song Year
-# 4. Play Previous
-# 5. View Status
-# 6. Exit
-# What option?1
-# Song title: Test
-# Song year: 2020
-# Added ['Test', 2020] to queue.
+1. Add Song
+2. Play Next
+3. View Current Song Year
+4. Play Previous
+5. View Status
+6. Exit
+What option?1
+Song title: john
+Song year: 2018
+Added ['john', 2018] to queue.
 
-# 1. Add Song
-# 2. Play Next
-# 3. View Current Song Year
-# 4. Play Previous
-# 5. View Status
-# 6. Exit
-# What option?1
-# Song title: john
-# Song year: 2018
-# Added ['john', 2018] to queue.
+1. Add Song
+2. Play Next
+3. View Current Song Year
+4. Play Previous
+5. View Status
+6. Exit
+What option?2
+Now Playing: Test
 
-# 1. Add Song
-# 2. Play Next
-# 3. View Current Song Year
-# 4. Play Previous
-# 5. View Status
-# 6. Exit
-# What option?2
-# Now Playing: Test
+1. Add Song
+2. Play Next
+3. View Current Song Year
+4. Play Previous
+5. View Status
+6. Exit
+What option?5
 
-# 1. Add Song
-# 2. Play Next
-# 3. View Current Song Year
-# 4. Play Previous
-# 5. View Status
-# 6. Exit
-# What option?5
+Playlist:
+  1. john (2018)
+History:
+  1. Test (2020)
 
-# Playlist:
-#   1. john (2018)
-# History:
-#   1. Test (2020)
+1. Add Song
+2. Play Next
+3. View Current Song Year
+4. Play Previous
+5. View Status
+6. Exit
+What option?4
+Rewinding to: Test
 
-# 1. Add Song
-# 2. Play Next
-# 3. View Current Song Year
-# 4. Play Previous
-# 5. View Status
-# 6. Exit
-# What option?4
-# Rewinding to: Test
+1. Add Song
+2. Play Next
+3. View Current Song Year
+4. Play Previous
+5. View Status
+6. Exit
+What option?5
 
-# 1. Add Song
-# 2. Play Next
-# 3. View Current Song Year
-# 4. Play Previous
-# 5. View Status
-# 6. Exit
-# What option?5
+Playlist:
+  1. Test (2020)
+  2. john (2018)
+History:
+  (it's empty)
 
-# Playlist:
-#   1. Test (2020)
-#   2. john (2018)
-# History:
-#   (it's empty)
+1. Add Song
+2. Play Next
+3. View Current Song Year
+4. Play Previous
+5. View Status
+6. Exit
+What option?2
+Now Playing: Test
 
-# 1. Add Song
-# 2. Play Next
-# 3. View Current Song Year
-# 4. Play Previous
-# 5. View Status
-# 6. Exit
-# What option?2
-# Now Playing: Test
+1. Add Song
+2. Play Next
+3. View Current Song Year
+4. Play Previous
+5. View Status
+6. Exit
+What option?5
 
-# 1. Add Song
-# 2. Play Next
-# 3. View Current Song Year
-# 4. Play Previous
-# 5. View Status
-# 6. Exit
-# What option?5
+Playlist:
+  1. john (2018)
+History:
+  1. Test (2020)
 
-# Playlist:
-#   1. john (2018)
-# History:
-#   1. Test (2020)
-
-# 1. Add Song
-# 2. Play Next
-# 3. View Current Song Year
-# 4. Play Previous
-# 5. View Status
-# 6. Exit
-# What option?
+1. Add Song
+2. Play Next
+3. View Current Song Year
+4. Play Previous
+5. View Status
+6. Exit
+What option?
+"""
