@@ -440,4 +440,93 @@ return False
 * drop smaller terms: ($n^2 + n \rightarrow O(n^2)$)
 * space: extra structure grows with (n) → **O(n)** else **O(1)**
 
+## Linear Search (sequential scan)
+
+### Pseudocode
+
+```text
+FUNCTION LinearSearch(A, target)
+    // A is a list/array, unsorted is OK
+    FOR i FROM 0 TO LENGTH(A) - 1 DO
+        IF A[i] = target THEN
+            RETURN i          // found at index i
+        ENDIF
+    ENDFOR
+    RETURN -1                 // not found
+ENDFUNCTION
+```
+
+### Big-O (time)
+
+* **Best case:** **O(1)** (target is first element)
+* **Average case:** **O(n)**
+* **Worst case:** **O(n)** (target last or not present)
+
+### Big-O (space)
+
+* **O(1)**
+
+### When to use
+
+* List **not sorted**
+* Small data or one-off search
+* Works on arrays/lists/linked lists
+
+---
+
+## Binary Search (divide-and-conquer)
+
+### Requirement
+
+* **A must be sorted** (usually ascending)
+* Works best when you have **fast indexing** (array/list)
+
+### Pseudocode (iterative)
+
+```text
+FUNCTION BinarySearch(A, target)
+    // A must be sorted ascending
+    low ← 0
+    high ← LENGTH(A) - 1
+
+    WHILE low ≤ high DO
+        mid ← (low + high) DIV 2
+
+        IF A[mid] = target THEN
+            RETURN mid
+        ELSE IF A[mid] < target THEN
+            low ← mid + 1
+        ELSE
+            high ← mid - 1
+        ENDIF
+    ENDWHILE
+
+    RETURN -1
+ENDFUNCTION
+```
+
+### Big-O (time)
+
+* **Best case:** **O(1)** (mid is target immediately)
+* **Average case:** **O(log n)**
+* **Worst case:** **O(log n)**
+
+### Big-O (space)
+
+* Iterative: **O(1)**
+* Recursive version: **O(log n)** (call stack)
+
+### When to use
+
+* Data is **sorted**
+* You’ll do **lots of searches**
+* Large datasets where speed matters
+
+---
+
+### One-line cheat sheet
+
+* **Linear Search:** unsorted OK, **O(n)** worst
+* **Binary Search:** must be sorted, **O(log n)** worst
+
 
