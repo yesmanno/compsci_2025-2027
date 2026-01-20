@@ -228,9 +228,9 @@ Pick the variable that grows with the input.
 **Example**
 
 * If input is a list `arr`:
-  [
+  $$
   n = \text{len(arr)}
-  ]
+  $$
 
 ---
 
@@ -288,8 +288,8 @@ Still grows like (n^2) → **O(n²)**
 
 ### Common simplification rules
 
-* **Drop constants:** (2n \rightarrow O(n))
-* **Drop lower terms:** (n^2 + n \rightarrow O(n^2))
+* **Drop constants:** ($2n \rightarrow O(n)$)
+* **Drop lower terms:** ($n^2 + n \rightarrow O(n^2)$)
 * **Keep dominant term only**
 
 ---
@@ -327,7 +327,7 @@ return False
 
 **Step-by-step**
 
-1. (n = \text{len(arr)})
+1. ($n = \text{len(arr)}$)
 2. basic op: `x == target`
 3. loop runs up to (n) times
 4. total ops ~ (n)
@@ -350,12 +350,12 @@ return False
 
 **Step-by-step**
 
-1. (n = \text{len(arr)})
+1. ($n = \text{len(arr)}$)
 2. basic op: `arr[i] == arr[j]`
 3. outer loop: (n)
 4. inner loop: (n)
-5. nested → (n \times n = n^2) comparisons (minus diagonal doesn’t change Big-O)
-6. simplify: (n^2 - n \rightarrow O(n^2))
+5. nested → ($n \times n = n^2$) comparisons (minus diagonal doesn’t change Big-O)
+6. simplify: ($n^2 - n \rightarrow O(n^2)$)
 
 ✅ **Time (worst): O(n²)**
 ✅ **Space: O(1)**
@@ -379,10 +379,10 @@ return False
 2. basic op: `arr[i] == arr[j]`
 3. outer: (n)
 4. inner: runs fewer each time
-   [
+   $$
    (n-1) + (n-2) + \dots + 1 = \frac{n(n-1)}{2}
-   ]
-5. simplify: (\frac{1}{2}n^2 - \frac{1}{2}n \rightarrow O(n^2))
+   $$
+5. simplify: ($\frac{1}{2}n^2 - \frac{1}{2}n \rightarrow O(n^2)$)
 
 ✅ **Time (worst): O(n²)**
 ✅ **Space: O(1)**
@@ -400,7 +400,7 @@ for j in range(n):   # loop B
     ...
 ```
 
-Total work: (n + n = 2n \rightarrow O(n))
+Total work: ($n + n = 2n \rightarrow O(n)$)
 
 ✅ **Time: O(n)**
 
@@ -419,10 +419,10 @@ return False
 
 **Step-by-step**
 
-1. (n = \text{len(arr)})
+1. ($n = \text{len(arr)}$)
 2. loop runs (n)
 3. set lookup average (O(1))
-4. total: (n \cdot 1 = O(n))
+4. total: ($n \cdot 1 = O(n)$)
    Space: `seen` can grow to size (n) → **O(n)**
 
 ✅ **Time (avg): O(n)**
@@ -436,12 +436,8 @@ return False
 * nested `for` over `n` → **O(n²)**
 * `for j in range(i, n)` (triangle) → **O(n²)**
 * two loops one after the other → **O(n)**
-* drop constants: (5n \rightarrow O(n))
-* drop smaller terms: (n^2 + n \rightarrow O(n^2))
+* drop constants: ($5n \rightarrow O(n)$)
+* drop smaller terms: ($n^2 + n \rightarrow O(n^2)$)
 * space: extra structure grows with (n) → **O(n)** else **O(1)**
-
----
-
-If you paste one or two more functions you expect to see (like 2D list averaging, stack/queue ops), I can do the same **step-by-step Big-O** breakdown for each in the exact cheat-sheet format.
 
 
