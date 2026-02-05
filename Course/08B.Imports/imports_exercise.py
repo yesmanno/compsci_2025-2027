@@ -11,8 +11,11 @@
 #   2) pi rounded to 3 decimal places
 
 # TODO: write your imports here
+import math
 
 # TODO: write your prints here
+print("sqrt(81) =", math.sqrt(81))
+print("pi (3 d.p.) =", round(math.pi, 3))
 
 
 # ---------------------------------------------------------------------------
@@ -26,12 +29,13 @@
 #   2) floor the result
 
 # TODO: write your imports here
+from math import sqrt, floor
 
 value = 50
 # TODO: compute root
-root = None
+root = sqrt(value)
 # TODO: compute floored
-floored = None
+floored = floor(root)
 
 print("sqrt(50) =", root)
 print("floor(sqrt(50)) =", floored)
@@ -47,9 +51,12 @@ print("floor(sqrt(50)) =", floored)
 # - Store the results in a list and print it
 
 # TODO: write your imports here
+import random as rnd
 
 rolls = []
 # TODO: add 10 random ints from 1 to 6
+for _ in range(10):
+    rolls.append(rnd.randint(1, 6))
 
 print("Rolls:", rolls)
 
@@ -67,10 +74,11 @@ print("Rolls:", rolls)
 #   3) my_utils.clamp(200, 0, 100)
 
 # TODO: write your import here
+import my_utils
 
-print("Shout:", None)   # TODO
-print("Is even:", None) # TODO
-print("Clamp:", None)   # TODO
+print("Shout:", my_utils.shout("hello"))        # TODO
+print("Is even:", my_utils.is_even(123))        # TODO
+print("Clamp:", my_utils.clamp(200, 0, 100))    # TODO
 
 
 # ---------------------------------------------------------------------------
@@ -83,7 +91,19 @@ print("Clamp:", None)   # TODO
 # - Write your answer as a multi-line string below:
 # - Below is an example of a multi-line string:
 answer = """
-TODO: write your explanation here.
+If you create a file named random.py in the same folder as your program, Python will often import
+YOUR random.py instead of the standard library random module.
+
+Why? When Python does an import, it searches locations in order (starting with the current working
+directory / the folder containing your script, then other paths in sys.path). Since your folder
+contains a file called random.py, it matches first and “shadows” the real random module.
+
+This breaks `import random` because your random.py probably doesn’t contain the functions you expect
+(e.g., randint). It can also cause circular import errors if your random.py itself tries to import
+random (it ends up importing itself).
+
+Fix: rename your file to something that doesn’t conflict (e.g., my_random.py) and delete any
+random.pyc / __pycache__ files if they were created.
 """
 
 print(answer)
