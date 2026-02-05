@@ -70,6 +70,16 @@ print("Total of valid numbers:", total)
 # - try/except KeyError
 # - OR dict.get() (recommended)
 
+mydictionary = {
+    "songs": ["Song A", "Song B", "Song C"], # "songs" = key
+    "games": ["Game X", "Game Y", "Game Z"], # list of games = value
+    "grades": ["A", "B", "C"],
+    "age": 21,
+    "name": "Alice",
+}
+mydictionary["age"] # Example of accessing a value
+mydictionary["age"] = 2500 # Example of modifying a value
+mydictionary["country"] = input("Enter country: ") # Example of adding a new key/value pair
 scores = {
     "Murrowak": 92,
     "Gyfin": 78,
