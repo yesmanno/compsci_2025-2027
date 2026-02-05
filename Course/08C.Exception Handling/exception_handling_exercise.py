@@ -15,7 +15,11 @@
 
 number = None
 
-# TODO: write your loop here
+while number is None:
+    try:
+        number = int(input("Enter an integer: "))
+    except ValueError:
+        print("Invalid input. Please enter a whole number (e.g., 5, -2, 100).")
 
 print("You entered:", number)
 
@@ -32,7 +36,17 @@ print("You entered:", number)
 #   2) ZeroDivisionError (b == 0)
 # - If an error happens, print a message and ask again
 
-# TODO: write your loop here
+while True:
+    try:
+        a = int(input("Enter integer a: "))
+        b = int(input("Enter integer b: "))
+        result = a / b
+        print(a, "/", b, "=", result)
+        break  # success, exit loop
+    except ValueError:
+        print("Invalid input. Please enter whole numbers only.")
+    except ZeroDivisionError:
+        print("You can't divide by 0. Please enter a non-zero value for b.")
 
 
 # ---------------------------------------------------------------------------
@@ -51,7 +65,11 @@ total = 0
 
 raw_values = ["10", "20", "hello", "30", "-5", "3.14", "40"]
 
-# TODO: write your code here
+for value in raw_values:
+    try:
+        total += int(value)
+    except ValueError:
+        print("Skipping invalid value:", value)
 
 print("Total of valid numbers:", total)
 
@@ -71,15 +89,16 @@ print("Total of valid numbers:", total)
 # - OR dict.get() (recommended)
 
 mydictionary = {
-    "songs": ["Song A", "Song B", "Song C"], # "songs" = key
-    "games": ["Game X", "Game Y", "Game Z"], # list of games = value
+    "songs": ["Song A", "Song B", "Song C"],  # "songs" = key
+    "games": ["Game X", "Game Y", "Game Z"],  # list of games = value
     "grades": ["A", "B", "C"],
     "age": 21,
     "name": "Alice",
 }
-mydictionary["age"] # Example of accessing a value
-mydictionary["age"] = 2500 # Example of modifying a value
-mydictionary["country"] = input("Enter country: ") # Example of adding a new key/value pair
+mydictionary["age"]  # Example of accessing a value
+mydictionary["age"] = 2500  # Example of modifying a value
+mydictionary["country"] = input("Enter country: ")  # Example of adding a new key/value pair
+
 scores = {
     "Murrowak": 92,
     "Gyfin": 78,
@@ -87,7 +106,13 @@ scores = {
     "Dokkaebi": 81,
 }
 
-# TODO: write your code here
+student = input("Enter a student name: ")
+
+score = scores.get(student)  # returns None if missing
+if score is None:
+    print("Student not found.")
+else:
+    print(student, "score is", score)
 
 
 # ---------------------------------------------------------------------------
@@ -97,3 +122,23 @@ scores = {
 # 1) Add a function safe_int_input(prompt) -> int that keeps asking until valid.
 # 2) Add a function safe_open_read_text(path) -> list[str] that returns [] if missing.
 # 3) Use your functions to reduce repeated code.
+
+def safe_int_input(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a whole number.")
+
+def safe_open_read_text(path):
+    try:
+        with open(path, "r", encoding="utf-8") as file:
+            return file.read().splitlines()
+    except FileNotFoundError:
+        print("File not found:", path)
+        return []
+
+# Example usage (optional):
+# a = safe_int_input("Enter a: ")
+# b = safe_int_input("Enter b: ")
+# lines = safe_open_read_text("data.txt")
