@@ -73,7 +73,6 @@ def shopping():
         "remaining_balance": pocket_balance,
         "total_spent": total_spent,
         "purchases": [{"item_name": name, "item_cost": cost} for name, cost in purchases],
-        "currency": "PLN",
     }
 
     file_name = "shopping_output.json"
