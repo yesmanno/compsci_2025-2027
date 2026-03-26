@@ -43,7 +43,7 @@ def deposit(self, amount):
 
 State belongs to the object, not to the whole program.
 
----
+
 
 ## 2. Encapsulation
 
@@ -76,7 +76,7 @@ def withdraw(self, amount):
 * attributes are stored in the object
 * methods control changes to those attributes
 
----
+
 
 ## 3. Methods
 
@@ -112,7 +112,7 @@ def deposit(self, amount):
 
 Methods usually use `self` to access the current object’s data.
 
----
+
 
 ## 4. Instantiation
 
@@ -125,7 +125,7 @@ account1 = BankAccount("Ali", 1000)
 * `BankAccount` = class
 * `account1` = object / instance
 
----
+
 
 ## 5. Constructor
 
@@ -142,7 +142,7 @@ def __init__(self, owner, balance):
 * sets initial values
 * ensures the object starts valid
 
----
+
 
 ## 6. Main loop
 
@@ -211,7 +211,7 @@ while running:
 * method calls are used
 * state changes properly
 
----
+
 
 ## 7. Naming conventions
 
@@ -247,7 +247,7 @@ get_balance()
 * `stuff`
 * `doThing()`
 
----
+
 
 ## 8. Comments
 
@@ -275,7 +275,7 @@ Use comments:
 * for sections of program
 * for menu/main loop steps
 
----
+
 
 # HL SECTION
 
@@ -321,7 +321,7 @@ Benefits:
 
 `Dog` **is an** `Animal`
 
----
+
 
 ## 10. Polymorphism
 
@@ -360,13 +360,13 @@ a.speak()
 
 Different behavior for different objects.
 
----
+
 
 ## 11. Aggregation and composition
 
 These describe “has-a” relationships.
 
----
+
 
 ### Aggregation
 
@@ -393,7 +393,7 @@ class Team:
 
 `Team` has `Player` objects.
 
----
+
 
 ### Composition
 
@@ -416,7 +416,7 @@ class House:
 
 The rooms are created as part of the house.
 
----
+
 
 # Fast definitions you can memorize
 
@@ -464,7 +464,7 @@ A class contains references to other existing objects.
 
 A class owns and creates other objects as part of itself.
 
----
+
 
 # Common exam sentence starters
 
@@ -480,7 +480,7 @@ These are useful in written answers:
 * “This is aggregation because the contained objects can exist independently.”
 * “This is composition because the contained objects are created and owned by the parent object.”
 
----
+
 
 # Mini templates
 
@@ -543,7 +543,7 @@ class Library:
         self.books.append(book)
 ```
 
----
+
 
 # What to check before submitting code
 
@@ -558,7 +558,7 @@ Make sure your program has:
 * comments in sensible places
 * for HL: inheritance, polymorphism, and aggregation/composition used correctly
 
----
+
 
 # Very common mistakes
 
@@ -573,7 +573,7 @@ Avoid these:
 * comments that just repeat code
 * not validating input before changing object state
 
----
+
 
 **SL**
 
